@@ -28,11 +28,11 @@ class Report(models.Model):
     start_hour = models.CharField(max_length=2, choices=hours)
     end_hour = models.CharField(max_length=2, choices=hours)
     user = models.ForeignKey(User, on_delete=models.CASCADE, default="")
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
     plan = models.PositiveIntegerField() # 正數
     execution = models.PositiveIntegerField()
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
     production_line = models.ForeignKey(ProductionLine, on_delete=models.CASCADE)
 
     def get_day(self):
