@@ -26,7 +26,7 @@ def report_view(request, production_line):
             obj.user = request.user
             obj.report = report
             obj.save()
-            form = ReportForm() # restart
+            form = ReportForm() # restart 
             # pform = ProblemReportedForm()
 
     elif "submitProblemBtn" in request.POST:
