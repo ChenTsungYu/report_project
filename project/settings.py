@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(l&5cby_s+bf7&j$cp%rj^v9j82vw!h7hsfqc1awlt3^4w%qg^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True # Production環境務必關閉(False)
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*'] # Production環境務必關閉
 
 # Application definition
 
@@ -123,6 +123,8 @@ USE_TZ = True
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+
+LOGIN_URL = '/admin/' # 設定：當前為未登入的狀態時，自動導向admin頁面
 
 STATIC_URL = '/static/'
 

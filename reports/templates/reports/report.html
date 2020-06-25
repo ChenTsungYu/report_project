@@ -46,10 +46,10 @@
                                         <button class="btn btn-warning open-modal" data-toggle="modal" data-target="#problemModal" data-url="{{obj.id}}"><i class="fas fa-exclamation-triangle"></i></button>
                                     </td>
                                     <td class="fit">
-                                        <a href=""><button class="btn btn-info"><i class="far fa-edit"></i></button></a>
+                                        <a href="{{obj.get_absolute_url}}"><button class="btn btn-info"><i class="far fa-edit"></i></button></a>
                                     </td>
                                     <td class="fit">
-                                        <a href=""><button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></a>
+                                        <a href="{% url 'reports:delete-view'  pk=obj.id%}"><button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></a>
                                     </td>
                                 </tr>
                             {% endfor %}
